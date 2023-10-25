@@ -14,6 +14,7 @@ jobs:
             - name: Add comment to issue
               uses: peter-evans/create-or-update-comment@v3
               with:
+                token: ${{ secrets.GITHUB_TOKEN }}
                 issue-number: ${{ github.event.issue.number }}
                 body-path: ./.github/GOVERNANCE/issue-answer-commitment.md
                   
