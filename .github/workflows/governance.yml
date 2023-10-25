@@ -17,4 +17,8 @@ jobs:
                 token: ${{ secrets.GITHUB_TOKEN }}
                 issue-number: ${{ github.event.issue.number }}
                 body-path: ./.github/GOVERNANCE/issue-answer-commitment.md
+            - name: Enforce governance
+              uses: jlcanovas/enforce-governance@v1
+              with:
+                rule: "2.2"
                   
