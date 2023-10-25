@@ -1,0 +1,15 @@
+name: governance
+on: 
+    issues:
+        types: [opened]
+jobs:
+    issue-answer-commitment:
+        name: Issue Answer Commitment
+        runs-on: ubuntu-latest
+        steps:
+            - name: Add comment to issue
+              uses: peter-evans/create-or-update-comment@v3
+              with:
+                issue-number: ${{ github.event.issue.number }}
+                body-path: ./.github/GOVERNANCE/issue-answer-commitment.md
+                  
