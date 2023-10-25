@@ -19,7 +19,7 @@ jobs:
                 body-path: ./.github/GOVERNANCE/issue-answer-commitment.md
             - name: Enforce governance
               id: governance
-              uses: jlcanovas/enforce-governance@c6b300d7c75b34c549ee7572cac17c2166a2ff6c
+              uses: jlcanovas/enforce-governance@ada56420180dd0bb7bfcf82a0e8bcb3ad4d9c1de
               with:
                 rule: "2.2"
             - name: Print the result
