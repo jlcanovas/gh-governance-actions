@@ -7,6 +7,10 @@ jobs:
         name: Issue Answer Commitment
         runs-on: ubuntu-latest
         steps:
+            - name: checkout repo
+              uses: actions/checkout@v3
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
             - name: Add comment to issue
               uses: peter-evans/create-or-update-comment@v3
               with:
